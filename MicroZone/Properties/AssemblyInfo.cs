@@ -20,14 +20,14 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于 typelib 的 ID
-[assembly: Guid("edb4010c-73e1-4541-8c7c-2d1db6a3860e")]
+[assembly: Guid("85494eb7-4d54-4a5a-996b-87b1eb80c76b")]
 
 // 程序集的版本信息由下列四个值组成:
 //
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
+//      主版本
+//      次版本
+//      内部版本号
+//      修订版本
 //
 // 可以指定所有值，也可以使用“修订号”和“内部版本号”的默认值，
 // 方法是按如下所示使用 "*":
