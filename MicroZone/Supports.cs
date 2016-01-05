@@ -93,7 +93,7 @@ namespace MicroZone
                     if(dr.GetString(1)==uName)
                     {
                         SqlExit();
-                        return 2;
+                        return 1;
                     }
                 }
             }
@@ -101,12 +101,14 @@ namespace MicroZone
             {
 
             }
+            SqlExit();
             return 0;
         }
         int isEmailExisted(string eMail)
         {
             try
             {
+                SqlInit();
                 cmd.CommandText = "SELECT * FROM users where email='" + eMail;
                 dr = cmd.ExecuteReader();
                 if (dr.NextResult())
@@ -122,6 +124,7 @@ namespace MicroZone
             {
 
             }
+            SqlExit();
             return 0;
         }
 
