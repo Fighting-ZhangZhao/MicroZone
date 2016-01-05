@@ -45,7 +45,7 @@ namespace MicroZone
             s=System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(s,"MD5");
             return s;
         }
-        int Login(string uName, string uPass)
+        public int Login(string uName, string uPass)
         {
             try
             {
@@ -86,7 +86,7 @@ namespace MicroZone
             return 0;
         }
 
-        int isNameExisted(string uName)
+        public int isNameExisted(string uName)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace MicroZone
             //email can use
             return 0;
         }
-        int isEmailExisted(string eMail)
+        public int isEmailExisted(string eMail)
         {
             try
             {
