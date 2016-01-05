@@ -81,17 +81,62 @@ namespace MicroZone
             return 0;
         }
 
-        int Register(string email, string uname, string upass)
+        int isNameExisted(string uName)
         {
             try
             {
                 SqlInit();
-                //cmd.CommandText = 
+                cmd.CommandText = "SELECT * FROM users where email='" + uName;
+                dr = cmd.ExecuteReader();
+                if(dr.NextResult())
+                {
+                    if(dr.GetString(1)==uName)
+                    {
+                        SqlExit();
+                        return 2;
+                    }
+                }
             }
             catch (SqlException e)
             {
 
             }
+            return 0;
+        }
+        int isEmailExisted(string eMail)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT * FROM users where email='" + eMail;
+                dr = cmd.ExecuteReader();
+                if (dr.NextResult())
+                {
+                    if (dr.GetString(2) == eMail)
+                    {
+                        SqlExit();
+                        return 1;
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+
+            }
+            return 0;
+        }
+
+        int Register(string eMail ,string uName,string uPass)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO users VALUES（'email','uName','uPass'）";
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+
+            }
+
             return 0;
         }
     }
