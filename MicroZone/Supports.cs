@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace MicroZone
 {
-    public class Supports : IHttpHandler
+    public class Supports 
     {
         /// <summary>
         /// 您将需要在网站的 Web.config 文件中配置此处理程序 
@@ -26,7 +26,7 @@ namespace MicroZone
         }
 
         #endregion
-        SqlConnection con = new SqlConnection("Sercer=121.42.32.109; Database=MicroZone; uid=sa; pwd=123456");
+        SqlConnection con = new SqlConnection("Server='121.42.32.109'; Database=MicroZone; uid=sa; pwd=123456");
         SqlCommand cmd = new SqlCommand();
         SqlDataReader dr;
 
@@ -125,18 +125,19 @@ namespace MicroZone
             return 0;
         }
 
-        int Register(string eMail ,string uName,string uPass)
+        public int Register(string eMail ,string uName,string uPass)
         {
             try
             {
-                cmd.CommandText = "INSERT INTO users VALUES（'email','uName','uPass'）";
+                SqlInit();
+                cmd.CommandText = "INSERT INTO [users] VALUES('"+eMail+"','"+uName+"','"+uPass+"')";
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException e)
             {
 
             }
-
+            SqlExit();
             return 0;
         }
     }
