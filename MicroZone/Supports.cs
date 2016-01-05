@@ -57,24 +57,29 @@ namespace MicroZone
                     if(dr.GetString(2)==MD5(uPass))
                     {
                         SqlExit();
+                        //success
                         return 2;
                     }
                     else
                     {
                         SqlExit();
+                        //pass error
                         return 1;
                     }
                 }
                 else
                 {
                     SqlExit();
+                    //name error
                     return 0;
                 }
                 
             }
             catch(SqlException e)
             {
-                
+                //error
+                SqlExit();
+                return 666;
             }
 
             SqlExit();
@@ -93,15 +98,19 @@ namespace MicroZone
                     if(dr.GetString(1)==uName)
                     {
                         SqlExit();
+                        //email existed
                         return 1;
                     }
                 }
             }
             catch (SqlException e)
             {
-
+                //error
+                SqlExit();
+                return 666;
             }
             SqlExit();
+            //email can use
             return 0;
         }
         int isEmailExisted(string eMail)
@@ -116,15 +125,19 @@ namespace MicroZone
                     if (dr.GetString(2) == eMail)
                     {
                         SqlExit();
+                        //name existed
                         return 1;
                     }
                 }
             }
             catch (SqlException e)
             {
-
+                //error
+                SqlExit();
+                return 666;
             }
             SqlExit();
+            //name can use
             return 0;
         }
 
@@ -133,14 +146,17 @@ namespace MicroZone
             try
             {
                 SqlInit();
-                cmd.CommandText = "INSERT INTO [users] VALUES('"+eMail+"','"+uName+"','"+uPass+"')";
+                cmd.CommandText = "INSERT INTO [users] VALUES('" + eMail + "','" + uName + "','" + MD5(uPass) + "')";
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException e)
             {
-
+                //error
+                SqlExit();
+                return 666;
             }
             SqlExit();
+            //success
             return 0;
         }
     }
