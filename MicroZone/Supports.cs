@@ -421,10 +421,10 @@ namespace MicroZone
             id = new List<int>();
             getFriends(userName, out friends, out a, out b);
             int i = friends.Count - 1;
-            cmd.CommandText = "SELECT * from contents where name = '"+userName+ "'OR name = '" + friends[i]+"'";
+            cmd.CommandText = "SELECT * from contents where username = '"+userName+ "'OR username = '" + friends[i]+"'";
             while(i--!=0)
             {
-                cmd.CommandText += "OR name = '" + friends[i] + "'";
+                cmd.CommandText += "OR username = '" + friends[i] + "'";
             }
             cmd.CommandText += " ORDER by userdate DESC";
             try
