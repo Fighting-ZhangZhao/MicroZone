@@ -91,7 +91,7 @@ namespace MicroZone
             try
             {
                 SqlInit();
-                cmd.CommandText = "SELECT * FROM users where email='" + uName + "'";
+                cmd.CommandText = "SELECT * FROM users where username='" + uName + "'";
                 dr = cmd.ExecuteReader();
                 if(dr.NextResult())
                 {
