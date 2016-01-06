@@ -35,7 +35,7 @@ namespace MicroZone
                 {
                     username = s1;
                     Application["u_name"] = s1;
-                    Response.Redirect("personPage.aspx");
+                    Response.Redirect("Friend.aspx");
                 }
             }
         }

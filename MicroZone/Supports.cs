@@ -185,7 +185,7 @@ namespace MicroZone
                 if (dr.Read())
                 {
                     eMail = dr.GetString(0);
-                    nickname = dr.GetString(4);
+                    nickname = dr.GetString(4);//something wrong
                     photo = dr.GetString(3);
                 }
             }
@@ -264,7 +264,6 @@ namespace MicroZone
             //success
             return 0;
         }
-
 
         public int getFriends(string userName, out List<string> friends, out List<string> inviting, out List<string> invited)
         {
@@ -375,5 +374,6 @@ namespace MicroZone
             SqlExit();
             return 0;
         }
+
     }
 }

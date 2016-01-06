@@ -273,6 +273,13 @@ namespace MicroZone
                 else
                     Response.Write("<script>alert('原始密码错误!')</script>");
             }
+            Label_AI_1.Visible = false;
+            Label_AI_2.Visible = false;
+            Label_AI_3.Visible = false;
+            TextBox_AI_1.Visible = false;
+            TextBox_AI_2.Visible = false;
+            TextBox_AI_3.Visible = false;
+            Button_AI.Visible = false;
         }
 
         protected void Button_nick_Click(object sender, EventArgs e)
@@ -288,6 +295,9 @@ namespace MicroZone
                 else
                     Response.Write("<script>alert('修改失败!')</script>");
             }
+            Label_nick.Visible = false;
+            TextBox_nick.Visible = false;
+            Button_nick.Visible =false;
         }
 
         protected void Button_avatar_Click(object sender, EventArgs e)
@@ -325,6 +335,13 @@ namespace MicroZone
             }
             else
                 Response.Write("<script>alert('修改失败!')</script>");
+            Label_AI_1.Visible = false;
+            Label_AI_2.Visible = false;
+            Label_AI_3.Visible = false;
+            TextBox_AI_1.Visible = false;
+            TextBox_AI_2.Visible = false;
+            TextBox_AI_3.Visible = false;
+            Button_AI.Visible = false;
         }
     }
 }
