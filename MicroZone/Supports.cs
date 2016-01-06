@@ -157,6 +157,9 @@ namespace MicroZone
 
         public int getInformation(string userName,out string eMail,out string nickname,out string photo)
         {
+            eMail = "";
+            nickname = "";
+            photo = "";
             try
             {
                 SqlInit();
@@ -229,7 +232,7 @@ namespace MicroZone
             try
             {
                 SqlInit();
-                cmd.CommandText = "UPDATE users Photo ='" + newPhoto + "' where username='" + userName + "'";
+                cmd.CommandText = "UPDATE users SET photo ='" + newPhoto + "' where username='" + userName + "'";
                 cmd.ExecuteNonQuery();
 
             }
