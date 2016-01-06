@@ -311,6 +311,10 @@ namespace MicroZone
                 SqlExit();
                 return 666;
             }
+
+            friends.Sort();
+            inviting.Sort();
+            invited.Sort();
             //success
             SqlExit();
             return 0;
@@ -323,6 +327,29 @@ namespace MicroZone
                 SqlInit();
                 cmd.CommandText = "INSERT INTO friends VALUES('" + userName1 + "','" + userName2 + "')";
                 cmd.ExecuteNonQuery();
+            }
+            catch(SqlException e)
+            {
+                SqlExit();
+                return 666;
+            }
+            SqlExit();
+            return 0;
+        }
+
+        public int Search(string key,out List<string> searched)
+        {
+            searched = new List<string>();
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "SELECT * from users where nickname LIKE '%" + key + "%' OR username = '" + key + "' OR email = '" + key + "'";
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    searched.Add(dr.GetString(1));
+                }
+                searched.Sort();
             }
             catch(SqlException e)
             {
