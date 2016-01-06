@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace MicroZone
 {
@@ -248,6 +249,69 @@ namespace MicroZone
         }
 
 
-        
+        public int getFriends(string userName, out List<string> friends, out List<string> inviting, out List<string> invited)
+        {
+            inviting = new List<string>();
+            invited = new List<string>();
+            friends = new List<string>();
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "SELECT * FROM friends where username1 = '" + userName + "' OR username2= '" + userName + "'";
+                dr = cmd.ExecuteReader();
+                if(dr.Read())
+                {
+                    do
+                    {
+                        if(dr.GetString(0)== userName)
+                        {
+                            inviting.Add(dr.GetString(1));
+                        }
+                        else
+                        {
+                            invited.Add(dr.GetString(0));
+                        }
+                    } while (dr.NextResult());                    
+                }
+                int i = 0;
+                while (i < invited.Count)
+                {
+                    if (inviting.Contains(invited[i]))
+                    {
+                        friends.Add(invited[i]);
+                        inviting.Remove(invited[i]);
+                        invited.RemoveAt(i);
+                    }
+                    else
+                    {
+                        i++;
+                    }
+                }
+            }
+            catch(SqlException e)
+            {
+                //error
+                SqlExit();
+                return 666;
+            }
+            //success
+            return 0;
+        }
+
+        public int invitations(string userName1,string userName2)
+        {
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "INSERT INTO friends ('" + userName1 + "','" + userName2 + "')";
+                cmd.ExecuteNonQuery();
+            }
+            catch(SqlException e)
+            {
+                SqlExit();
+                return 666;
+            }
+            return 0;
+        }
     }
 }
