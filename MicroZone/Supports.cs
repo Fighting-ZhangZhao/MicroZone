@@ -217,10 +217,24 @@ namespace MicroZone
             return 0;
         }
 
-        public string updatePhoto()
+        public int updatePhoto(string userName,int newPhoto)
         {
-            string location="";
-            return location;
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "UPDATE users Photo ='ftp://121.42.32.109/Photo/" + newPhoto.ToString() + ".jpg' where username='" + userName + "'";
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (SqlException e)
+            {
+                //error
+                SqlExit();
+                return 666;
+            }
+            SqlExit();
+            //success
+            return 0;
         }
         
     }
