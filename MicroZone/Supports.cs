@@ -185,8 +185,10 @@ namespace MicroZone
                 if (dr.Read())
                 {
                     eMail = dr.GetString(0);
-                    nickname = dr.GetString(4);
-                    photo = dr.GetString(3);
+                    if(!dr.IsDBNull(4))
+                        nickname = dr.GetString(4);
+                    if(!dr.IsDBNull(3))
+                        photo = dr.GetString(3);
                 }
             }
             catch (SqlException e)
