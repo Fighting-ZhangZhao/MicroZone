@@ -65,7 +65,7 @@ namespace MicroZone
                 SqlInit();
                 cmd.CommandText = "SELECT * FROM users where email='" + uName + "' OR username='"+uName+"'";
                 dr = cmd.ExecuteReader();
-                if (dr.NextResult())
+                if (dr.Read())
                 {
                     if(dr.GetString(2)==MD5(uPass))
                     {
@@ -106,7 +106,7 @@ namespace MicroZone
                 SqlInit();
                 cmd.CommandText = "SELECT * FROM users where username='" + uName + "'";
                 dr = cmd.ExecuteReader();
-                if(dr.NextResult())
+                if(dr.Read())
                 {
                     if(dr.GetString(1)==uName)
                     {
@@ -133,7 +133,7 @@ namespace MicroZone
                 SqlInit();
                 cmd.CommandText = "SELECT * FROM users where email='" + eMail + "'";
                 dr = cmd.ExecuteReader();
-                if (dr.NextResult())
+                if (dr.Read())
                 {
                     if (dr.GetString(2) == eMail)
                     {
