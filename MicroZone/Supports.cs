@@ -411,7 +411,7 @@ namespace MicroZone
             return 0;
         }
 
-        public int getContents(string userName, out List<string> name,List<DateTime> date, out List<string> contents, out List<int> id)
+        public int getContents(string userName, out List<string> name, out List<DateTime> date, out List<string> contents, out List<int> id)
         {
             List<string> friends;
             List<string> a, b;
@@ -449,7 +449,7 @@ namespace MicroZone
             return 0;
         }
 
-        public int getComments(int id,out List<string> name, List<DateTime> date, out List<string> comments)
+        public int getComments(int id, out List<string> name, out List<DateTime> date, out List<string> comments)
         {
             name = new List<string>();
             date = new List<DateTime>();
