@@ -13,7 +13,7 @@ namespace MicroZone
         Supports date = new Supports();
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.username = Application["u_name"].ToString();
+            username = Application["u_name"].ToString();
             Label_name.Text= username;
         }
 
