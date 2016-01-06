@@ -32,13 +32,26 @@ namespace MicroZone
 
         void SqlInit()
         {
-            con.Open();
-            cmd.Connection = con;
+            try {
+                con.Open();
+                cmd.Connection = con;
+            }
+            catch(SqlException e)
+            {
+
+            }
         }
 
         void SqlExit()
         {
-            con.Close();
+            try
+            {
+                con.Close();
+            }
+            catch(SqlException e)
+            {
+
+            }
         }
         string MD5(string s)
         {
