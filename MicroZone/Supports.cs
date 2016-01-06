@@ -185,8 +185,10 @@ namespace MicroZone
                 if (dr.Read())
                 {
                     eMail = dr.GetString(0);
-                    nickname = dr.GetString(4);//something wrong
-                    photo = dr.GetString(3);
+                    if(!dr.IsDBNull(4))
+                        nickname = dr.GetString(4);
+                    if(!dr.IsDBNull(3))
+                        photo = dr.GetString(3);
                 }
             }
             catch (SqlException e)
@@ -264,6 +266,7 @@ namespace MicroZone
             //success
             return 0;
         }
+
 
         public int getFriends(string userName, out List<string> friends, out List<string> inviting, out List<string> invited)
         {
@@ -352,6 +355,7 @@ namespace MicroZone
             SqlExit();
             return 0;
         }
+
         public int Search(string key,out List<string> searched)
         {
             searched = new List<string>();
@@ -375,5 +379,107 @@ namespace MicroZone
             return 0;
         }
 
+        public int pubContents(string userName,string content)
+        {
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "INSERT INTO contents (username,userdate,usercontent) VALUES('" + userName + "','" + System.DateTime.Now.ToString() + "','" + content + "')";
+                cmd.ExecuteNonQuery();
+            }
+            catch(SqlException e)
+            {
+                SqlExit();
+                return 666;
+            }
+            SqlExit();
+            return 0;
+        }
+
+        public int pubComments(string userName,string content,int id)
+        {
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "INSERT INTO comment (comname,comdate,comcontent,id) VALUES('" + userName + "','" + System.DateTime.Now.ToString() + "','" + content + "',"+id+")";
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                SqlExit();
+                return 666;
+            }
+            SqlExit();
+            return 0;
+        }
+
+        public int getContents(string userName, out List<string> name, out List<DateTime> date, out List<string> contents, out List<int> id)
+        {
+            List<string> friends;
+            List<string> a, b;
+            name = new List<string>();
+            date = new List<DateTime>();
+            contents = new List<string>();
+            id = new List<int>();
+            getFriends(userName, out friends, out a, out b);
+            int i = friends.Count - 1;
+            cmd.CommandText = "SELECT * from contents where username = '"+userName+ "'OR username = '" + friends[i]+"'";
+            while(i--!=0)
+            {
+                cmd.CommandText += "OR username = '" + friends[i] + "'";
+            }
+            cmd.CommandText += " ORDER by userdate DESC";
+            try
+            {
+                SqlInit();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    name.Add(dr.GetString(0));
+                    date.Add(dr.GetDateTime(1));
+                    contents.Add(dr.GetString(2));
+                    id.Add(dr.GetInt32(3));
+                }
+                
+            }
+            catch (SqlException e)
+            {
+                SqlExit();
+                return 666;
+            }
+            SqlExit();
+            return 0;
+        }
+
+        public int getComments(int id, out List<string> name, out List<DateTime> date, out List<string> comments)
+        {
+            name = new List<string>();
+            date = new List<DateTime>();
+            comments = new List<string>();
+            cmd.CommandText = "SELECT * FROM comment where id=" + id.ToString() + " ORDER BY comdate DESC";
+            try
+            {
+                SqlInit();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    name.Add(dr.GetString(1));
+                    date.Add(dr.GetDateTime(2));
+                    comments.Add(dr.GetString(3));
+                }
+            }
+            catch(SqlException e)
+            {
+                SqlExit();
+                return 666;
+            }
+            if (name.Count == 0)
+            {                
+                SqlExit();
+                return 1;//no comments
+            }
+            SqlExit();
+            return 0;//success
+        }
     }
 }

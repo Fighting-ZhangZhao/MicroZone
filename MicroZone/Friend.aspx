@@ -80,12 +80,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_email1" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button_sent1" runat="server" Font-Size="Large" Text="Sent invitation" Width="122px" OnClick="Button_sent1_Click" Visible="False" />
-&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <br />
                     <asp:Label ID="Label_nn1" runat="server" Font-Size="X-Large" Text="Nickname" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_nick1" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button_sent1" runat="server" Font-Size="Large" Text="Sent invitation" Width="122px" OnClick="Button_sent1_Click" Visible="False" />
 				</div>
 			</div>
 			<div class="row clearfix">
@@ -101,11 +102,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_email2" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button_sent2" runat="server" Font-Size="Large" Height="33px" Text="Sent invitation" Width="122px" Visible="False" />
                     <br />
                     <asp:Label ID="Label_nn2" runat="server" Font-Size="X-Large" Text="Nickname" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_nick2" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button_sent2" runat="server" Font-Size="Large" Height="33px" Text="Sent invitation" Width="122px" Visible="False" />
 				</div>
 			</div>
 			<div class="row clearfix">
@@ -121,11 +123,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_email3" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button_sent3" runat="server" Font-Size="Large" Height="33px" Text="Sent invitation" Width="122px" Visible="False" />
                     <br />
                     <asp:Label ID="Label_nn3" runat="server" Font-Size="X-Large" Text="Nickname" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_nick3" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button_sent3" runat="server" Font-Size="Large" Height="33px" Text="Sent invitation" Width="122px" Visible="False" />
 				</div>
 			</div>
 			<div class="row clearfix">
@@ -141,11 +144,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_email4" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button_sent4" runat="server" Font-Size="Large" Height="33px" Text="Sent invitation" Width="122px" Visible="False" />
                     <br />
                     <asp:Label ID="Label_nn4" runat="server" Font-Size="X-Large" Text="Nickname" Visible="False"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label_nick4" runat="server" Font-Size="Large" ForeColor="#333333" Visible="False"></asp:Label>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button_sent4" runat="server" Font-Size="Large" Height="33px" Text="Sent invitation" Width="122px" Visible="False" />
 				</div>
 			</div>
             <div class="row clearfix">

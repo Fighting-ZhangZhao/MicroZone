@@ -148,15 +148,6 @@ namespace MicroZone {
         protected global::System.Web.UI.WebControls.Label Label_email1;
         
         /// <summary>
-        /// Button_sent1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_sent1;
-        
-        /// <summary>
         /// Label_nn1 控件。
         /// </summary>
         /// <remarks>
@@ -173,6 +164,15 @@ namespace MicroZone {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_nick1;
+        
+        /// <summary>
+        /// Button_sent1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_sent1;
         
         /// <summary>
         /// Image3 控件。
@@ -220,15 +220,6 @@ namespace MicroZone {
         protected global::System.Web.UI.WebControls.Label Label_email2;
         
         /// <summary>
-        /// Button_sent2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_sent2;
-        
-        /// <summary>
         /// Label_nn2 控件。
         /// </summary>
         /// <remarks>
@@ -245,6 +236,15 @@ namespace MicroZone {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_nick2;
+        
+        /// <summary>
+        /// Button_sent2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_sent2;
         
         /// <summary>
         /// Image4 控件。
@@ -292,15 +292,6 @@ namespace MicroZone {
         protected global::System.Web.UI.WebControls.Label Label_email3;
         
         /// <summary>
-        /// Button_sent3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_sent3;
-        
-        /// <summary>
         /// Label_nn3 控件。
         /// </summary>
         /// <remarks>
@@ -317,6 +308,15 @@ namespace MicroZone {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_nick3;
+        
+        /// <summary>
+        /// Button_sent3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_sent3;
         
         /// <summary>
         /// Image5 控件。
@@ -364,15 +364,6 @@ namespace MicroZone {
         protected global::System.Web.UI.WebControls.Label Label_email4;
         
         /// <summary>
-        /// Button_sent4 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_sent4;
-        
-        /// <summary>
         /// Label_nn4 控件。
         /// </summary>
         /// <remarks>
@@ -389,6 +380,15 @@ namespace MicroZone {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_nick4;
+        
+        /// <summary>
+        /// Button_sent4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_sent4;
         
         /// <summary>
         /// Button1 控件。
