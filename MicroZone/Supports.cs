@@ -141,7 +141,7 @@ namespace MicroZone
             try
             {
                 SqlInit();
-                cmd.CommandText = "INSERT INTO [users] VALUES('" + eMail + "','" + uName + "','" + createMD5(uPass) + "')";
+                cmd.CommandText = "INSERT INTO [users] (email,username,password) VALUES('" + eMail + "','" + uName + "','" + createMD5(uPass) + "')";
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException e)
@@ -246,6 +246,8 @@ namespace MicroZone
             //success
             return 0;
         }
+
+
         
     }
 }
