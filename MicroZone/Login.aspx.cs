@@ -7,10 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace MicroZone
 {
-
     public partial class Login : System.Web.UI.Page
     {
         Supports date = new Supports();
+        public string username;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -33,10 +33,12 @@ namespace MicroZone
                     Response.Write("<script>alert('密码错误!')</script>");
                 else//登录主界面
                 {
+                    username = s1;
+                    Application["u_name"] = s1;
+                    Response.Redirect("personPage.aspx");
                 }
             }
         }
-
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");
