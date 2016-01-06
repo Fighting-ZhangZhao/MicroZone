@@ -172,6 +172,56 @@ namespace MicroZone
             //success
             return 0;
         }
+
+        public int changePass(string userName,string originPass,string newPass)
+        {
+            int returnint = Login(userName, originPass);
+            if(returnint==2)
+            {
+                try
+                {
+                    SqlInit();
+                    cmd.CommandText = "UPDATE users password='" + newPass + "' where username = '" + userName + "'";
+                    cmd.ExecuteNonQuery();
+                }
+                catch (SqlException e)
+                {
+                    //error
+                    SqlExit();
+                    return 666;
+                }
+                //success
+                return 3;
+            }
+            SqlExit();
+            return returnint;
+        }
+
+        public int changeNickname(string userName,string newNickname)
+        {
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "UPDATE users nickname ='" + newNickname + "' where username='" + userName + "'";
+                cmd.ExecuteNonQuery();
+                
+            }
+            catch (SqlException e)
+            {
+                //error
+                SqlExit();
+                return 666;
+            }
+            SqlExit();
+            //success
+            return 0;
+        }
+
+        public string updatePhoto()
+        {
+            string location="";
+            return location;
+        }
         
     }
 }
