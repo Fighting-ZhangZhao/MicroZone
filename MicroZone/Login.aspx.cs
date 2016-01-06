@@ -37,17 +37,6 @@ namespace MicroZone
             }
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            string s1 = TextBox1.Text;
-            int nameExist = date.isNameExisted(s1);
-            int emialExist = date.isEmailExisted(s1);
-            if (nameExist == 0)
-                Response.Write("<script>alert('输入用户名不存在!')</script>");
-            else if (emialExist == 0)
-                Response.Write("<script>alert('输入Email不存在!')</script>");
-        }
-
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");
