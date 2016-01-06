@@ -2,6 +2,8 @@
 using System.Web;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace MicroZone
 {
@@ -15,6 +17,7 @@ namespace MicroZone
 
         void SqlInit()
         {
+
             try {
                 con.Open();
                 cmd.Connection = con;
@@ -38,8 +41,21 @@ namespace MicroZone
         }
         string createMD5(string s)
         {
-            s=System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(s,"MD5");
-            return s;
+            // Use input string to calculate MD5 hash
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(s);
+            byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+            // Convert the byte array to hexadecimal string
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++)
+            {
+                sb.Append(hashBytes[i].ToString("X2"));
+                // To force the hex string to lower-case letters instead of
+                // upper-case, use he following line instead:
+                // sb.Append(hashBytes[i].ToString("x2")); 
+            }
+            return sb.ToString();
         }
         public int Login(string uName, string uPass)
         {
@@ -202,6 +218,7 @@ namespace MicroZone
                     return 666;
                 }
                 //success
+                SqlExit();
                 return 3;
             }
             SqlExit();
@@ -271,7 +288,7 @@ namespace MicroZone
                         {
                             invited.Add(dr.GetString(0));
                         }
-                    } while (dr.NextResult());                    
+                    } while (dr.Read());                    
                 }
                 int i = 0;
                 while (i < invited.Count)
@@ -295,6 +312,7 @@ namespace MicroZone
                 return 666;
             }
             //success
+            SqlExit();
             return 0;
         }
 
@@ -303,7 +321,7 @@ namespace MicroZone
             try
             {
                 SqlInit();
-                cmd.CommandText = "INSERT INTO friends ('" + userName1 + "','" + userName2 + "')";
+                cmd.CommandText = "INSERT INTO friends VALUES('" + userName1 + "','" + userName2 + "')";
                 cmd.ExecuteNonQuery();
             }
             catch(SqlException e)
@@ -311,6 +329,7 @@ namespace MicroZone
                 SqlExit();
                 return 666;
             }
+            SqlExit();
             return 0;
         }
     }
