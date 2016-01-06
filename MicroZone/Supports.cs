@@ -337,6 +337,22 @@ namespace MicroZone
             return 0;
         }
 
+        public int refuse(string userName1,string userName2)
+        {
+            try
+            {
+                SqlInit();
+                cmd.CommandText = "DELETE FROM friends where username1='" + userName1 + "' AND username2='" + userName2 + "'";
+                cmd.ExecuteNonQuery();
+            }
+            catch(SqlException e)
+            {
+                SqlExit();
+                return 666;
+            }
+            SqlExit();
+            return 0;
+        }
         public int Search(string key,out List<string> searched)
         {
             searched = new List<string>();
