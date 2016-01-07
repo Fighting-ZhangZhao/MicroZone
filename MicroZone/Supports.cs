@@ -422,14 +422,19 @@ namespace MicroZone
             contents = new List<string>();
             id = new List<int>();
             getFriends(userName, out friends, out a, out b);
-            int i;
-            if (friends.Count != 0) 
+            int i = 0;
+
+            if (friends.Count != 0)
+            {
                 i = friends.Count - 1;
+                cmd.CommandText = "SELECT * from contents where username = '" + userName + "'OR username = '" + friends[i] + "'";
+            }
             else
             {
-                return 1;//no friends
+                cmd.CommandText = "SELECT * from contents where username = '" + userName + "'";
             }
-            cmd.CommandText = "SELECT * from contents where username = '"+userName+ "'OR username = '" + friends[i]+"'";
+
+            
             while(i--!=0)
             {
                 cmd.CommandText += "OR username = '" + friends[i] + "'";
