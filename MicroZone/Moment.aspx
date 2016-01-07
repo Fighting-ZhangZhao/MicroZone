@@ -100,6 +100,13 @@
 				<div class="col-md-12 column">
 					<div class="page-header">
 						<h1>
+					<asp:Button ID="Button11" runat="server" Font-Size="Large" Height="31px" OnClick="Button11_Click" Text="Personal" Width="134px" />
+&nbsp;&nbsp;
+                    <asp:Button ID="Button12" runat="server" Font-Size="Large" Height="31px" OnClick="Button12_Click" Text="Moment" Width="134px" />
+&nbsp;&nbsp;
+                    <asp:Button ID="Button13" runat="server" Font-Size="Large" Height="31px" Text="Friend" Width="134px" OnClick="Button13_Click" />
+				        </h1>
+                        <h1>
 							<span style="color:white;">Moment </span><small><span style="color:white;">——give us your feelings!</span></small></h1>
 					</div>
 				</div>

@@ -128,12 +128,14 @@ namespace MicroZone
             }
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        
+
+        protected void Button11_Click(object sender, EventArgs e)
         {
             Response.Redirect("personPage.aspx");
         }
 
-        protected void Button4_Click(object sender, EventArgs e)
+        protected void Button13_Click(object sender, EventArgs e)
         {
             Response.Redirect("Friend.aspx");
         }
