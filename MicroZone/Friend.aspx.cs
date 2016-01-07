@@ -34,6 +34,8 @@ namespace MicroZone
                 Response.Write("<script>alert('信息丢失，请联系客服!')</script>");
             else
             {
+                for (int i = 0; i < friends.Count; i++)
+                    Label_fri.Text += friends[i] + " ";
                 if(invited.Count!=0)
                 {
                     Label_nameasked.Visible = true;
@@ -175,40 +177,6 @@ namespace MicroZone
             Label_nick4.Visible = false;
             Button_sent4.Visible = false;
         }
-        protected void Button9_Click(object sender, EventArgs e)
-        {
-            friends.Add(invited[0]);
-            int inv = date.invitations(invited[0], name);
-            if (inv == 0)
-            {
-                Response.Write("<script>alert('" + invited[0] + "已经成为你的朋友!')</script>");
-                invited.RemoveAt(0);
-            }
-            else
-            {
-                Response.Write("<script>alert('发送信息失败!')</script>");
-            }
-            Label_nameasked.Visible = false;
-            Label4.Visible = false;
-            Button9.Visible = false;
-            Button10.Visible = false;
-        }
-
-        protected void Button10_Click(object sender, EventArgs e)
-        {
-            int refu= date.refuse(invited[0], name);
-            if (refu == 0)
-            {
-                Response.Write("<script>alert('你已经拒绝了" + invited[0] + "的邀请!')</script>");
-                invited.RemoveAt(0);
-                Label_nameasked.Visible = false;
-                Label4.Visible = false;
-                Button9.Visible = false;
-                Button10.Visible = false;
-            }
-            else
-                Response.Write("<script>alert('发送信息失败!')</script>");
-        }
         protected void Button8_Click1(object sender, EventArgs e)
         {
             Unsee();
@@ -344,11 +312,6 @@ namespace MicroZone
                 Response.Write("<script>alert('发送邀请失败!')</script>");
         }
 
-        protected void Button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void Button11_Click(object sender, EventArgs e)
         {
             Response.Redirect("personPage.aspx");
@@ -357,6 +320,41 @@ namespace MicroZone
         protected void Button12_Click(object sender, EventArgs e)
         {
             Response.Redirect("Moment.aspx");
+        }
+
+        protected void Button9_Click1(object sender, EventArgs e)
+        {
+            friends.Add(invited[0]);
+            int inv = date.invitations(invited[0], name);
+            if (inv == 0)
+            {
+                Response.Write("<script>alert('" + invited[0] + "已经成为你的朋友!')</script>");
+                Label_fri.Text += invited[0];
+                invited.RemoveAt(0);
+            }
+            else
+            {
+                Response.Write("<script>alert('发送信息失败!')</script>");
+            }
+            Label_nameasked.Visible = false;
+            Label4.Visible = false;
+            Button9.Visible = false;
+            Button10.Visible = false;
+        }
+        protected void Button10_Click1(object sender, EventArgs e)
+        {
+            int refu = date.refuse(invited[0], name);
+            if (refu == 0)
+            {
+                Response.Write("<script>alert('你已经拒绝了" + invited[0] + "的邀请!')</script>");
+                invited.RemoveAt(0);
+                Label_nameasked.Visible = false;
+                Label4.Visible = false;
+                Button9.Visible = false;
+                Button10.Visible = false;
+            }
+            else
+                Response.Write("<script>alert('发送信息失败!')</script>");
         }
     }
 }
