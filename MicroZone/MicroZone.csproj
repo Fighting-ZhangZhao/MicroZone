@@ -67,6 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Friend.aspx" />
+    <Content Include="images\bg3.jpg" />
+    <Content Include="images\bg4.jpg" />
     <Content Include="Moment.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
