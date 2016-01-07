@@ -109,21 +109,21 @@
 		</div>
 		<div class="col-md-6 column">
 			<h3>
-				Microzone , your personal life bulter!</h3>
+				<span style="color:white;">Microzone , your personal life bulter!</span></h3>
 			<blockquote>
 				<p>
-					&nbsp;——easy zone , easy life.
+					&nbsp;<span style="color:white;">——easy zone , easy life.</span>
 				</p>
 &nbsp;</blockquote>
 		</div>
         <small> <cite> <small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Font-Size="X-Large" Text="Username/E-mail"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Font-Size="X-Large" Text="Username/E-mail" ForeColor="White"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox1" runat="server" Height="40px" Width="257px"></asp:TextBox>
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <small><small>
-        <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="Password"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="Password" ForeColor="White"></asp:Label>
         </small>
 			</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox2" runat="server" Height="40px" Width="257px" TextMode="Password"></asp:TextBox>
