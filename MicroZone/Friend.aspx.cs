@@ -140,6 +140,41 @@ namespace MicroZone
                     Button_sent4.Enabled = false;
             }
         }
+        public void Unsee()
+        {
+            Image2.Visible = false;
+            Label_n1.Visible = false;
+            Label_name1.Visible = false;
+            Label_e1.Visible = false;
+            Label_email1.Visible = false;
+            Label_nn1.Visible = false;
+            Label_nick1.Visible = false;
+            Button_sent1.Visible = false;
+            Image3.Visible = false;
+            Label_n2.Visible = false;
+            Label_name2.Visible = false;
+            Label_e2.Visible = false;
+            Label_email2.Visible = false;
+            Label_nn2.Visible = false;
+            Label_nick2.Visible = false;
+            Button_sent2.Visible = false;
+            Image4.Visible = false;
+            Label_n3.Visible = false;
+            Label_name3.Visible = false;
+            Label_e3.Visible = false;
+            Label_email3.Visible = false;
+            Label_nn3.Visible = false;
+            Label_nick3.Visible = false;
+            Button_sent3.Visible = false;
+            Image5.Visible = false;
+            Label_n4.Visible = false;
+            Label_name4.Visible = false;
+            Label_e4.Visible = false;
+            Label_email4.Visible = false;
+            Label_nn4.Visible = false;
+            Label_nick4.Visible = false;
+            Button_sent4.Visible = false;
+        }
         protected void Button9_Click(object sender, EventArgs e)
         {
             friends.Add(invited[0]);
@@ -176,6 +211,7 @@ namespace MicroZone
         }
         protected void Button8_Click1(object sender, EventArgs e)
         {
+            Unsee();
             string user = TextBox1.Text;
             int sea = date.Search(user, out search);
             if (sea == 0)
@@ -210,6 +246,7 @@ namespace MicroZone
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Unsee();
             if (search.Count>0)
             {
                 switch (search.Count)
@@ -238,6 +275,7 @@ namespace MicroZone
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            Unsee();
             if (search.Count - 4 > 0)
             {
                 switch (search.Count-4)
@@ -266,6 +304,7 @@ namespace MicroZone
 
         protected void Button3_Click(object sender, EventArgs e)
         {
+            Unsee();
             if (search.Count - 8 > 0)
             {
                 switch (search.Count - 8)
