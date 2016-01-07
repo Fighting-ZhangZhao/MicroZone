@@ -139,5 +139,10 @@ namespace MicroZone
         {
             Response.Redirect("Friend.aspx");
         }
+
+        protected void Button12_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Moment.aspx");
+        }
     }
 }

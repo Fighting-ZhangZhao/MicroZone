@@ -100,11 +100,11 @@
 				<div class="col-md-12 column">
 					<div class="page-header">
 						<h1>
-					<asp:Button ID="Button11" runat="server" Font-Size="Large" Height="31px" OnClick="Button11_Click" Text="Personal" Width="134px" />
+					<asp:Button ID="Button11" runat="server" Font-Size="Large" Height="50px" OnClick="Button11_Click" Text="Personal" Width="120px" CssClass=" a_demo_one"/>
 &nbsp;&nbsp;
-                    <asp:Button ID="Button12" runat="server" Font-Size="Large" Height="31px" OnClick="Button12_Click" Text="Moment" Width="134px" />
+                    <asp:Button ID="Button12" runat="server" Font-Size="Large" Height="50px" OnClick="Button12_Click" Text="Moment" Width="120px" CssClass=" a_demo_one"/>
 &nbsp;&nbsp;
-                    <asp:Button ID="Button13" runat="server" Font-Size="Large" Height="31px" Text="Friend" Width="134px" OnClick="Button13_Click" />
+                    <asp:Button ID="Button13" runat="server" Font-Size="Large" Height="50px" Text="Friend" Width="120px" OnClick="Button13_Click" CssClass=" a_demo_one"/>
 				        </h1>
                         <h1>
 							<span style="color:white;">Moment </span><small><span style="color:white;">——give us your feelings!</span></small></h1>
@@ -182,7 +182,7 @@
 				    <br />
                     <br />
 				    <asp:TextBox ID="TextBox1" runat="server" Height="62px" Width="453px">speak somthing......</asp:TextBox>
-&nbsp;<asp:Button ID="Button1" runat="server" Font-Size="Large" Height="62px" OnClick="Button1_Click" Text="publish" />
+&nbsp;<asp:Button ID="Button1" runat="server" Font-Size="Large" Height="50px" Width="120px" OnClick="Button1_Click" Text="publish" class="a_demo_one"/>
 				    <br />
                     <br />
 				</div>

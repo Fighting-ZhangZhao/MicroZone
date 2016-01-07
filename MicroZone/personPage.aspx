@@ -105,11 +105,11 @@
 		<div class="col-md-12 column">
 			<div class="page-header">
 				<h1>
-					<asp:Button ID="Button2" runat="server" Font-Size="Large" Height="31px" Text="Personal" Width="134px" />
+					<asp:Button ID="Button2" runat="server" Font-Size="Large" Height="50px" Text="Personal" Width="120px" CssClass=" a_demo_one"/>
 &nbsp;&nbsp;
-                    <asp:Button ID="Button3" runat="server" Font-Size="Large" Height="31px" OnClick="Button3_Click" Text="Moment" Width="134px" />
+                    <asp:Button ID="Button3" runat="server" Font-Size="Large" Height="50px" OnClick="Button3_Click" Text="Moment" Width="120px" CssClass=" a_demo_one"/>
 &nbsp;&nbsp;
-                    <asp:Button ID="Button4" runat="server" Font-Size="Large" Height="31px" OnClick="Button4_Click" Text="Friend" Width="134px" />
+                    <asp:Button ID="Button4" runat="server" Font-Size="Large" Height="50px" OnClick="Button4_Click" Text="Friend" Width="120px" CssClass=" a_demo_one"/>
                 <h1>
 					<asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="ftp://121.42.32.109/Photo/1.jpg" Width="100px" />
 &nbsp;&nbsp;&nbsp;&nbsp; <p><span style="color:white;">Personal Microzone</span></p>
