@@ -21,6 +21,13 @@
 		<div class="col-md-12 column">
 			<div class="page-header">
 				<h1>
+					<asp:Button ID="Button11" runat="server" Font-Size="Large" Height="31px" OnClick="Button11_Click" Text="Personal" Width="134px" />
+&nbsp;&nbsp;
+                    <asp:Button ID="Button12" runat="server" Font-Size="Large" Height="31px" OnClick="Button12_Click" Text="Moment" Width="134px" />
+&nbsp;&nbsp;
+                    <asp:Button ID="Button13" runat="server" Font-Size="Large" Height="31px" OnClick="Button13_Click" Text="Friend" Width="134px" />
+				</h1>
+                <h1>
 					Weclome to the Microzone!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Image ID="Image1" runat="server" Height="100px" Width="100px" />
 &nbsp;&nbsp;

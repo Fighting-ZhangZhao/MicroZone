@@ -343,5 +343,15 @@ namespace MicroZone
             TextBox_AI_3.Visible = false;
             Button_AI.Visible = false;
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Moment.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Friend.aspx");
+        }
     }
 }

@@ -24,6 +24,13 @@
 				<div class="col-md-12 column">
 					<div class="page-header">
 						<h1>
+							<asp:Button ID="Button2" runat="server" Font-Size="Large" Height="31px" OnClick="Button2_Click" Text="Personal" Width="134px" />
+&nbsp;&nbsp;
+                            <asp:Button ID="Button3" runat="server" Font-Size="Large" Height="31px" Text="Moment" Width="134px" />
+&nbsp;&nbsp;
+                            <asp:Button ID="Button4" runat="server" Font-Size="Large" Height="31px" OnClick="Button4_Click" Text="Friend" Width="134px" />
+                        </h1>
+                        <h1>
 							Moment <small>——give us your feelings!</small></h1>
 					</div>
 				</div>
@@ -99,10 +106,13 @@
 				<div class="col-md-12 column">
 				    <asp:TextBox ID="TextBox1" runat="server" Height="62px" Width="453px">speak somthing......</asp:TextBox>
 &nbsp;<asp:Button ID="Button1" runat="server" Font-Size="Large" Height="62px" OnClick="Button1_Click" Text="publish" />
+				    <br />
+                    <br />
 				</div>
                 <div class="row clearfix">
 		<div class="col-md-4 column">
-		    <asp:Image ID="Image2" runat="server" Height="100px" Visible="False" Width="100px" />
+		&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Image ID="Image2" runat="server" Height="100px" Visible="False" Width="100px" />
 		</div>
 		<div class="col-md-8 column">
 		    <asp:Label ID="Label_nam1" runat="server" ForeColor="#666666" Visible="False"></asp:Label>
@@ -119,34 +129,36 @@
 	</div>
                 <div class="row clearfix">
 		<div class="col-md-4 column">
-		    <asp:Image ID="Image3" runat="server" Height="100px" Width="100px" />
+		&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Image ID="Image3" runat="server" Height="100px" Visible="False" Width="100px" />
 		</div>
 		<div class="col-md-8 column">
-		    <asp:Label ID="Label_nam2" runat="server" ForeColor="#666666"></asp:Label>
+		    <asp:Label ID="Label_nam2" runat="server" ForeColor="#666666" Visible="False"></asp:Label>
             <br />
             <br />
-            <asp:Label ID="Label_moments2" runat="server" Font-Size="Large"></asp:Label>
+            <asp:Label ID="Label_moments2" runat="server" Font-Size="Large" Visible="False"></asp:Label>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label_time2" runat="server" Text="Time : "></asp:Label>
-            <asp:Label ID="Label_t2" runat="server" ForeColor="#666666"></asp:Label>
+            <asp:Label ID="Label_time2" runat="server" Text="Time : " Visible="False"></asp:Label>
+            <asp:Label ID="Label_t2" runat="server" ForeColor="#666666" Visible="False"></asp:Label>
 		</div>
 	</div>
                 <div class="row clearfix">
 		<div class="col-md-4 column">
-		    <asp:Image ID="Image4" runat="server" Height="100px" Width="100px" />
+		&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Image ID="Image4" runat="server" Height="100px" Visible="False" Width="100px" />
 		</div>
 		<div class="col-md-8 column">
-		    <asp:Label ID="Label_nam3" runat="server" ForeColor="#666666"></asp:Label>
+		    <asp:Label ID="Label_nam3" runat="server" ForeColor="#666666" Visible="False"></asp:Label>
             <br />
             <br />
-            <asp:Label ID="Label_moments3" runat="server" Font-Size="Large"></asp:Label>
+            <asp:Label ID="Label_moments3" runat="server" Font-Size="Large" Visible="False"></asp:Label>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label_time3" runat="server" Text="Time : "></asp:Label>
-            <asp:Label ID="Label_t3" runat="server" ForeColor="#666666"></asp:Label>
+            <asp:Label ID="Label_time3" runat="server" Text="Time : " Visible="False"></asp:Label>
+            <asp:Label ID="Label_t3" runat="server" ForeColor="#666666" Visible="False"></asp:Label>
 		</div>
 	</div>
 			</div>

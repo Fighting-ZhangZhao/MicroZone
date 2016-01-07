@@ -20,8 +20,8 @@ namespace MicroZone
         public List<int> id = new List<int>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            // username = Application["u_name"].ToString();
-            username = "xiaobian";//just for quick test
+            username = Application["u_name"].ToString();
+            //username = "xiaobian"; //just for quick test
             int getinfo = date.getInformation(username, out emial, out nickname, out imageurl);
             if (getinfo == 666)
                 Response.Write("<script>alert('信息丢失，请联系客服!')</script>");
@@ -49,7 +49,7 @@ namespace MicroZone
             string E, N, Image;
             if(name.Count>0)
             {
-                int getinfo = date.getInformation(name[name.Count - 1], out E, out N, out Image);
+                int getinfo = date.getInformation(name[0], out E, out N, out Image);
                 if(getinfo==0)
                 {
                     Image2.Visible = true;
@@ -57,9 +57,9 @@ namespace MicroZone
                     Label_moments1.Visible = true;
                     Label_t1.Visible = true;
                     Label_time1.Visible = true;
-                    Label_nam1.Text = name[name.Count - 1];
-                    Label_moments1.Text = contents[name.Count - 1];
-                    Label_t1.Text = Date[name.Count - 1].ToString();
+                    Label_nam1.Text = name[0];
+                    Label_moments1.Text = contents[0];
+                    Label_t1.Text = Date[0].ToString();
                     Image2.ImageUrl = Image;
                 }
             }
@@ -126,6 +126,16 @@ namespace MicroZone
                 else
                     Response.Write("<script>alert('系统错误，发送失败!')</script>");
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("personPage.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Friend.aspx");
         }
     }
 }

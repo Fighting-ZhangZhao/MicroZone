@@ -343,5 +343,20 @@ namespace MicroZone
             else
                 Response.Write("<script>alert('发送邀请失败!')</script>");
         }
+
+        protected void Button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button11_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("personPage.aspx");
+        }
+
+        protected void Button12_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Moment.aspx");
+        }
     }
 }
